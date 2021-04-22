@@ -78,22 +78,22 @@ Pressing Enter sends message
 ## 5.0 References
 
 Socket Programming:
-https://www.geeksforgeeks.org/socket-programming-python/
+    https://www.geeksforgeeks.org/socket-programming-python/
 
 Creating a multi-client chat using threading:
-https://www.positronx.io/create-socket-server-with-multiple-clients-in-python/
-https://www.bogotobogo.com/python/python_network_programming_tcp_server_client_chat_server_chat_client_select.php
-https://www.jitsejan.com/python-and-javascript-in-flask.html
+    https://www.positronx.io/create-socket-server-with-multiple-clients-in-python/
+    https://www.bogotobogo.com/python/python_network_programming_tcp_server_client_chat_server_chat_client_select.php
+    https://www.jitsejan.com/python-and-javascript-in-flask.html
 
 Flask:
-https://www.brianlinkletter.com/2020/12/flask-web-app-tutorial-for-network-engineers/
-https://www.youtube.com/watch?v=mqhxxeeTbu0
-https://codeburst.io/building-your-first-chat-application-using-flask-in-7-minutes-f98de4adfa5d
-https://www.youtube.com/watch?v=uJC8A_7VZOA (having room IDs)
-https://github.com/danielv775/Whisperly/blob/master/application.py
-https://www.youtube.com/watch?v=2-S-PMWJVxM (pt 2 has login)
-https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
-https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxi-user-notifications
+    https://www.brianlinkletter.com/2020/12/flask-web-app-tutorial-for-network-engineers/
+    https://www.youtube.com/watch?v=mqhxxeeTbu0
+    https://codeburst.io/building-your-first-chat-application-using-flask-in-7-minutes-f98de4adfa5d
+    https://www.youtube.com/watch?v=uJC8A_7VZOA (having room IDs)
+    https://github.com/danielv775/Whisperly/blob/master/application.py
+    https://www.youtube.com/watch?v=2-S-PMWJVxM (pt 2 has login)
+    https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+    https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxi-user-notifications
 
 Ajax:
 
@@ -102,28 +102,28 @@ HTML:
 HTML and Python:
 
 Diffie-Hellman encryption technique:
-https://medium.com/@sadatnazrul/diffie-hellman-key-exchange-explained-python-8d67c378701c
+    https://medium.com/@sadatnazrul/diffie-hellman-key-exchange-explained-python-8d67c378701c
 
 CSS:
-https://getbootstrap.com/docs/4.3/components/navbar/
-https://www.youtube.com/watch?v=iUk-zgfRFU4
-https://www.w3schools.com/howto/howto_js_topnav.asp
-https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
-https://www.youtube.com/watch?v=YesSVqjcDts
-https://www.w3schools.com/w3css/w3css_sidebar.asp
+    https://getbootstrap.com/docs/4.3/components/navbar/
+    https://www.youtube.com/watch?v=iUk-zgfRFU4
+    https://www.w3schools.com/howto/howto_js_topnav.asp
+    https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+    https://www.youtube.com/watch?v=YesSVqjcDts
+    https://www.w3schools.com/w3css/w3css_sidebar.asp
 
 Buttons and notification:
-https://mdbootstrap.com/docs/standard/components/buttons/
+    https://mdbootstrap.com/docs/standard/components/buttons/
 
 Filtering:
-https://www.w3schools.com/howto/howto_js_filter_lists.asp
+    https://www.w3schools.com/howto/howto_js_filter_lists.asp
 
 Dynamic changing:
-https://www.quackit.com/javascript/tutorial/innerhtml_in_javascript.cfm#:~:text=The%20innerHTML%20property%20can%20be,content%20without%20refreshing%20the%20page.&text=The%20innerHTML%20property%20can%20be%20used%20along%20with%20getElementById(),element%20and%20change%20its%20contents.
+    https://www.quackit.com/javascript/tutorial/innerhtml_in_javascript.cfm#:~:text=The%20innerHTML%20property%20can%20be,content%20without%20refreshing%20the%20page.&text=The%20innerHTML%20property%20can%20be%20used%20along%20with%20getElementById(),element%20and%20change%20its%20contents.
 
 Databases with MySQL/ MongoDB etc. :
-https://www.youtube.com/watch?v=vDxrmKOJMJ8
-https://flask-mysqldb.readthedocs.io/en/latest/
+    https://www.youtube.com/watch?v=vDxrmKOJMJ8
+    https://flask-mysqldb.readthedocs.io/en/latest/
 
 Private messaging with flask:
-https://cloudstack.ninja/lordhomie/sending-private-messages-using-flask-socketio/
+    https://cloudstack.ninja/lordhomie/sending-private-messages-using-flask-socketio/
