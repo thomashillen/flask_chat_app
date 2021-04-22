@@ -1,5 +1,6 @@
 flask
-python-socketio==3.1.2
-flask_socketio==4.3.2
+python-socketio
+flask_socketio
 flask-session
 eventlet
+socketio
