@@ -1,6 +1,6 @@
-#### Isabella Malixi and Thomas Hillenmeyer - Computer Networking - Spring 2021
+#### Isabella Malixi and Thomas Hillenmeyer _ Computer Networking _ Spring 2021
 
-# NYU Classroom Chat App - Flask, SocketIO
+# NYU Classroom Chat App \* Flask, SocketIO
 
 This is an online chat application made to support onine schooling which uses Python, Flask and Socket IO.
 
@@ -100,29 +100,39 @@ Pressing Enter sends message
 
 - Ajax:
 
-HTML:
+- HTML:
 
-HTML and Python:
+- HTML and Python:
 
-Diffie-Hellman encryption technique:
-https://medium.com/@sadatnazrul/diffie-hellman-key-exchange-explained-python-8d67c378701c
+- Diffie-Hellman encryption technique:
 
-CSS: - https://getbootstrap.com/docs/4.3/components/navbar/ - https://www.youtube.com/watch?v=iUk-zgfRFU4 - https://www.w3schools.com/howto/howto_js_topnav.asp - https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
-https://www.youtube.com/watch?v=YesSVqjcDts
-https://www.w3schools.com/w3css/w3css_sidebar.asp
+  - https://medium.com/@sadatnazrul/diffie-hellman-key-exchange-explained-python-8d67c378701c
 
-Buttons and notification:
-https://mdbootstrap.com/docs/standard/components/buttons/
+- CSS:
 
-Filtering:
-https://www.w3schools.com/howto/howto_js_filter_lists.asp
+  - https://getbootstrap.com/docs/4.3/components/navbar/
+  - https://www.youtube.com/watch?v=iUk-zgfRFU4
+  - https://www.w3schools.com/howto/howto_js_topnav.asp
+  - https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+  - https://www.youtube.com/watch?v=YesSVqjcDts
+  - https://www.w3schools.com/w3css/w3css_sidebar.asp
 
-Dynamic changing:
-https://www.quackit.com/javascript/tutorial/innerhtml_in_javascript.cfm#:~:text=The%20innerHTML%20property%20can%20be,content%20without%20refreshing%20the%20page.&text=The%20innerHTML%20property%20can%20be%20used%20along%20with%20getElementById(),element%20and%20change%20its%20contents.
+- Buttons and notification:
 
-Databases with MySQL/ MongoDB etc. :
-https://www.youtube.com/watch?v=vDxrmKOJMJ8
-https://flask-mysqldb.readthedocs.io/en/latest/
+  - https://mdbootstrap.com/docs/standard/components/buttons/
 
-Private messaging with flask:
-https://cloudstack.ninja/lordhomie/sending-private-messages-using-flask-socketio/
+- Filtering:
+
+  - https://www.w3schools.com/howto/howto_js_filter_lists.asp
+
+- Dynamic changing:
+
+  - https://www.quackit.com/javascript/tutorial/innerhtml_in_javascript.cfm#:~:text=The%20innerHTML%20property%20can%20be,content%20without%20refreshing%20the%20page.&text=The%20innerHTML%20property%20can%20be%20used%20along%20with%20getElementById(),element%20and%20change%20its%20contents.
+
+- Databases with MySQL/ MongoDB etc. :
+
+  - https://www.youtube.com/watch?v=vDxrmKOJMJ8
+  - https://flask-mysqldb.readthedocs.io/en/latest/
+
+- Private messaging with flask:
+  - https://cloudstack.ninja/lordhomie/sending-private-messages-using-flask-socketio/
