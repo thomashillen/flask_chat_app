@@ -1,7 +1,6 @@
 # NYU Classroom Chat App - Flask, SocketIO
-## Isabella Malixi and Thomas Hillenmeyer
 
-
+#### Isabella Malixi and Thomas Hillenmeyer - Computer Networking - Spring 2021
 
 This is a simple chat application which uses Python, Flask and Socket IO.
 
