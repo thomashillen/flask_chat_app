@@ -105,10 +105,10 @@ Diffie-Hellman encryption technique:
     https://medium.com/@sadatnazrul/diffie-hellman-key-exchange-explained-python-8d67c378701c
 
 CSS:
-    https://getbootstrap.com/docs/4.3/components/navbar/
-    https://www.youtube.com/watch?v=iUk-zgfRFU4
-    https://www.w3schools.com/howto/howto_js_topnav.asp
-    https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+    - https://getbootstrap.com/docs/4.3/components/navbar/
+    - https://www.youtube.com/watch?v=iUk-zgfRFU4
+    - https://www.w3schools.com/howto/howto_js_topnav.asp
+    - https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
     https://www.youtube.com/watch?v=YesSVqjcDts
     https://www.w3schools.com/w3css/w3css_sidebar.asp
 
