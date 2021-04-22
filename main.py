@@ -38,7 +38,24 @@ f.close()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    if(request.method == 'POST'):
+        netID = request.form['netID']
+        password = request.form['password']
+        first = request.form['first']
+        last = request.form['last']
+        role = request.form['role']
+        f = open('users.txt', "a")
+        f.write("\n"+netID + ', ' + password + ', ' + first + ', '+ last + ', ' + role + "\n")
+        f.close()
+        obj = user(netID, password, first, last, role)
+        login_list[obj.netID] = obj
+        return render_template('index.html')
+    elif(request.method == 'GET'):
+        return render_template('index.html')
+
+@app.route('/SignUp', methods=['GET', 'POST'])
+def SignUp():
+    return render_template('signup.html')
 
 
 @app.route('/home', methods=['GET', 'POST'])
@@ -58,7 +75,6 @@ def home():
         return render_template('home.html')
 
 
-# PRIVATE
 @app.route('/privatemessaging', methods=['GET', 'POST'])
 def privatemessaging():
     return render_template('privatemessaging.html')

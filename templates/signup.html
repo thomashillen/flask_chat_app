@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>NYU Chat Sign-Up</title>
+  <!--Link to CSS -->
+  <link href="../static/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/style.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <form class="form-signin" action="{{url_for('index')}}" method="POST">
+    <h1 class="h2 mb-3 font-weight-normal">NYU Chat Sign-Up</h1><br><br>
+
+
+    <input type="text" id="netID" name="netID" class="form-control" placeholder="NetID" required autofocus><br>
+
+    <input type="text" id="password" name="password" class="form-control" placeholder="Password" required><br>
+
+    <input type="text" id="first" name="first" class="form-control" placeholder="First Name" required autofocus><br>
+
+    <input type="text" id="last" name="last" class="form-control" placeholder="Last Name" required autofocus><br>
+
+    <input type="text" id="role" name="role" class="form-control" placeholder="Student or Professor?" required autofocus><br>
+    
+    <button class="btn btn-lg btn-primary btn-block" value="submit">Sign-Up</button>
+  </form>
+
+  
+</body>
+
+</html>
