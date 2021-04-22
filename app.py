@@ -52,8 +52,8 @@ def home():
             return redirect(url_for('index'))
 
          # Store the data in session
-        #session['username'] = login_list.get(
-            #username).first + " " + login_list.get(username).last
+        # session['username'] = login_list.get(
+            # username).first + " " + login_list.get(username).last
         session['username'] = username
         return render_template('home.html', session=session)
     elif(request.method == 'GET'):
@@ -73,12 +73,12 @@ def join(message):
     room = session.get('room')
     join_room(room)
     # emit history
-    t = open("CNhistory.txt", "r")
+    t = open("msg_history/CNhistory.txt", "r")
     history = t.read()
     emit('message', {'msg': history}, room=room)
     t.close()
     username = login_list.get(
-            session.get('username')).first + " " + login_list.get(session.get('username')).last
+        session.get('username')).first + " " + login_list.get(session.get('username')).last
     emit('status', {'msg':  username +
          ' has entered the room.'}, room=room)
 
@@ -87,9 +87,9 @@ def join(message):
 def text(message):
     room = session.get('room')
     username = login_list.get(
-            session.get('username')).first + " " + login_list.get(session.get('username')).last
+        session.get('username')).first + " " + login_list.get(session.get('username')).last
     # add to history
-    t = open("CNhistory.txt", "a")
+    t = open("msg_history/CNhistory.txt", "a")
     t.write(username + ' : ' + message['msg'] + "\n")
     t.close()
     emit('message', {'msg': username + ' : ' + message['msg']}, room=room)
@@ -99,7 +99,7 @@ def text(message):
 def left(message):
     room = session.get('room')
     username = login_list.get(
-            session.get('username')).first + " " + login_list.get(session.get('username')).last
+        session.get('username')).first + " " + login_list.get(session.get('username')).last
     leave_room(room)
     # session.clear()
     emit('status', {'msg': username + ' has left the room.'}, room=room)
@@ -111,29 +111,30 @@ def privatemessaging():
     return render_template('privatemessaging.html')
 
 
-
-
-
 @app.route('/chat', methods=['GET', 'POST'])
 def chat():
     if(request.method == 'POST'):
         room = request.form['room']
+        l = list(room)
         # Store the data in session: ORIGINAL
         #session['room'] = room
-        
-        #TRANSLATE
-        user = session.get('username') #netID
-        #bin_user = ''.join(format(ord(i), '08b') for i in user)
-        
-        requested = room #netID
-        #bin_req = ''.join(format(ord(i), '08b') for i in requested)
-        if user>requested:
-            translate = user+requested
+        if l[0] == '~':
+            # TRANSLATE
+            user = session.get('username')  # netID
+            #bin_user = ''.join(format(ord(i), '08b') for i in user)
+            requested = "".join(l[1:])  # netID
+            #bin_req = ''.join(format(ord(i), '08b') for i in requested)
+            if user > requested:
+                translate = user+requested
+            else:
+                translate = requested+user
+            session['room'] = translate
+            return render_template('chat.html', session=session)
+
         else:
-            translate = requested+user
-        session['room'] = translate
-        
-        return render_template('chat.html', session=session)
+            session['room'] = room
+            return render_template('chat.html', session=session)
+
     else:
         if(session.get('username') is not None):
             return render_template('chat.html', session=session)
@@ -144,9 +145,15 @@ def chat():
 @socketio.on('join', namespace='/chat')
 def join(message):
     room = session.get('room')
-    username = login_list.get(
-            session.get('username')).first + " " + login_list.get(session.get('username')).last
     join_room(room)
+    str_room = "msg_history/%s.txt" % str(room)
+    t = open(str_room, "r")
+    history = t.read()
+    emit('message', {'msg': history}, room=room)
+    t.close()
+    username = login_list.get(
+        session.get('username')).first + " " + login_list.get(session.get('username')).last
+
     emit('status', {'msg':  username +
          ' has entered the room.'}, room=room)
 
@@ -155,7 +162,11 @@ def join(message):
 def text(message):
     room = session.get('room')
     username = login_list.get(
-            session.get('username')).first + " " + login_list.get(session.get('username')).last
+        session.get('username')).first + " " + login_list.get(session.get('username')).last
+    str_room = "msg_history/%s.txt" % str(room)
+    t = open(str_room, "a")
+    t.write(username + ' : ' + message['msg'] + "\n")
+    t.close()
     emit('message', {'msg': username + ' : ' + message['msg']}, room=room)
 
 
@@ -163,9 +174,9 @@ def text(message):
 def left(message):
     room = session.get('room')
     username = login_list.get(
-            session.get('username')).first + " " + login_list.get(session.get('username')).last
+        session.get('username')).first + " " + login_list.get(session.get('username')).last
     leave_room(room)
-    #session.clear()
+    # session.clear()
     emit('status', {'msg': username + ' has left the room.'}, room=room)
 
 
