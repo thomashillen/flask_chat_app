@@ -60,51 +60,6 @@ def home():
         return render_template('home.html')
 
 
-@app.route('/ComputerNetworking', methods=['GET', 'POST'])
-def ComputerNetworking():
-    room = 'CN'
-    # Store the data in session
-    session['room'] = room
-    return render_template('ComputerNetworking.html', session=session)
-
-
-@socketio.on('join', namespace='/ComputerNetworking')
-def join(message):
-    room = session.get('room')
-    join_room(room)
-    # emit history
-    t = open("msg_history/CNhistory.txt", "r")
-    history = t.read()
-    emit('message', {'msg': history}, room=room)
-    t.close()
-    username = login_list.get(
-        session.get('username')).first + " " + login_list.get(session.get('username')).last
-    emit('status', {'msg':  username +
-         ' has entered the room.'}, room=room)
-
-
-@socketio.on('text', namespace='/ComputerNetworking')
-def text(message):
-    room = session.get('room')
-    username = login_list.get(
-        session.get('username')).first + " " + login_list.get(session.get('username')).last
-    # add to history
-    t = open("msg_history/CNhistory.txt", "a")
-    t.write(username + ' : ' + message['msg'] + "\n")
-    t.close()
-    emit('message', {'msg': username + ' : ' + message['msg']}, room=room)
-
-
-@socketio.on('left', namespace='/ComputerNetworking')
-def left(message):
-    room = session.get('room')
-    username = login_list.get(
-        session.get('username')).first + " " + login_list.get(session.get('username')).last
-    leave_room(room)
-    # session.clear()
-    emit('status', {'msg': username + ' has left the room.'}, room=room)
-
-
 # PRIVATE
 @app.route('/privatemessaging', methods=['GET', 'POST'])
 def privatemessaging():
