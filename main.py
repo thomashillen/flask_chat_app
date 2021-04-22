@@ -52,8 +52,6 @@ def home():
             return redirect(url_for('index'))
 
          # Store the data in session
-        # session['username'] = login_list.get(
-            # username).first + " " + login_list.get(username).last
         session['username'] = username
         return render_template('home.html', session=session)
     elif(request.method == 'GET'):
@@ -71,23 +69,24 @@ def chat():
     if(request.method == 'POST'):
         room = request.form['room']
         l = list(room)
-        # Store the data in session: ORIGINAL
-        #session['room'] = room
+        # Store the data in session
         if l[0] == '~':
             # TRANSLATE
             user = session.get('username')  # netID
-            #bin_user = ''.join(format(ord(i), '08b') for i in user)
+
             requested = "".join(l[1:])  # netID
-            #bin_req = ''.join(format(ord(i), '08b') for i in requested)
             if user > requested:
                 translate = user+requested
             else:
                 translate = requested+user
             session['room'] = translate
+            session['room_display'] = login_list.get(user).first + " " + login_list.get(user).last + " and " + login_list.get(requested).first + " " + login_list.get(requested).last
+
             return render_template('chat.html', session=session)
 
         else:
             session['room'] = room
+            session['room_display'] = room
             return render_template('chat.html', session=session)
 
     else:

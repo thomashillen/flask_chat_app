@@ -1,3 +1,3 @@
 ilm233, password, Bella, Malixi, student
 th2158, password, Thomas, Hillenmeyer, student
-ps147, password, Spathis, Spathis, professor
+ps147, password, Promethee, Spathis, professor
