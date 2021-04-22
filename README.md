@@ -1,4 +1,7 @@
-# RealTime Chat App - Flask, SocketIO
+# NYU Classroom Chat App - Flask, SocketIO
+## Isabella Malixi and Thomas Hillenmeyer
+
+
 
 This is a simple chat application which uses Python, Flask and Socket IO.
 
