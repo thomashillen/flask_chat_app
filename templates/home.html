@@ -28,7 +28,6 @@
 
   <body class="text-center">
     <div class="sidenav">
-      <div class="text-left">
       <img class="logo" src="../static/NYU.png" >
       <a class="a" style= "color:white; font-size:26px; text-decoration:underline">Enrolled Classes:</a>
       <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
@@ -39,7 +38,6 @@
       </form>
       <br>
       <br>
-    </div>
     <button class="btn btn-primary" onclick=pvtmsg() >Private Messaging</button>
 
     <br /><br />
@@ -52,9 +50,24 @@
 
     </div>
     
-    <div class="main">
+    <div class="main" style="overflow:hidden;"">
 
-    <h1 class="h2 mb-3 font-weight-normal">Welcome to NYU Chat!</h1><br><br>
+      <div class="title-text">
+        <span class="letters">Welcome </span>
+        <span class="letters">to </span>
+        <span class="letters">NYU </span>
+        <span class="letters">Chat!</span>
+      </div>
+
+      <br><br>
+
+      <div style="border-style:solid">
+        <p style="font-size: 26px;">This is an online chat application made to support onine schooling which uses Python, Flask and Socket IO.</p>
+        <p>Created by Isabella Malixi and Thomas Hillenmeyer</p>
+        <p>Computer Networking with professor Promethee Spathis- Spring 2021</p>
+      </div>
+    
+    
   
 
       

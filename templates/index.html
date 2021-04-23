@@ -9,16 +9,19 @@
 </head>
 
 <body class="text-center">
-  <form class="form-signin" action="{{url_for('home')}}" method="POST">
-    <h1 class="h2 mb-3 font-weight-normal">NYU Chat</h1><br><br>
-    <input type="text" id="username" name="username" class="form-control" placeholder="NetID" required autofocus><br>
-    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required><br>
-    <!-- An element to toggle between password visibility -->
-  <input type="checkbox" onclick="myFunction()"> Show Password<br><br>
-    <button class="btn btn-lg btn-primary btn-block" value="submit">Enter</button>
-    <br><br>
-    <a href="{{url_for('SignUp')}}">Sign-Up</a>
-  </form>
+  <div class="main">
+    <form class="form-signin" action="{{url_for('home')}}" method="POST">
+      <h1 class="h2 mb-3 font-weight-normal">NYU Chat</h1><br><br>
+      <input type="text" id="username" name="username" class="form-control" placeholder="NetID" required autofocus><br>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required><br>
+      <!-- An element to toggle between password visibility -->
+    <input type="checkbox" onclick="myFunction()"> Show Password<br><br>
+      <button class="btn btn-lg btn-primary btn-block" value="submit">Enter</button>
+      <br><br>
+      <a href="{{url_for('SignUp')}}">Sign-Up</a>
+    </form>
+  </div>
+  
 
   <script>
   function myFunction() {

@@ -1,33 +1,32 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 body {
-  display: -ms-flexbox;
+  /* display: -ms-flexbox; */
   display: flex;
-  -ms-flex-align: center;
+  /* -ms-flex-align: center; */
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
   background-color: #f5f5f5;
+  flex-wrap: wrap;
 }
 
 /* The sidebar menu */
 .sidenav {
+  flex-basis: 250px; /* Set the width of the sidebar */
+  /* flex-grow: 1; */
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 250px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  position: relative; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
   background-color: #57068c; /* NYU Purple */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 200px;
+  min-width: 250px;
   float: left;
 }
 /* The navigation menu links */
 .sidenav a {
-  padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 16px;
   color: #ffffff;
@@ -35,27 +34,30 @@ body {
 }
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #d3d3d3;
+  color: #ce4545;
 }
 
 .main {
-  position: absolute;
   padding: 20px;
-  left: 250px;
-  width: 80%;
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 66%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
 .chatnav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 400px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  flex-basis: 400px; /* Set the width of the sidebar */
+  position: relative; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 250px;
+  /* left: 250px; */
   background-color: #ffffff; /* NYU Purple */
   overflow-x: hidden; /* Disable horizontal scroll */
-  float: left;
+  /* float: left; */
+  /* display: flex; */
+  flex-direction: column;
 }
 
 /* .chatwindow {
@@ -125,4 +127,56 @@ body {
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+}
+
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+.title-text {
+  text-align: center;
+}
+
+.title-text span.letters {
+  font-size: 6rem;
+}
+
+.letters {
+  color: #57068c;
+  text-shadow: 2px 2px 6px #333;
+  animation: color-changer 5s infinite;
+  transition: color-changer ease-in-out;
+  @for $i from 1 through 7 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: #{$i * 50}ms;
+    }
+  }
+}
+
+@keyframes color-changer {
+  33% {
+    color: #57068c;
+  }
+  /* #EE0BF5 cctv*/
+  66% {
+    color: #b700ff;
+  }
+  /* #00CCFF marine */
+  100% {
+    color: #57068c;
+  }
+  /* #66F50B radio */
+}
+
+@-webkit-keyframes color-changer {
+  33% {
+    color: #57068c;
+  }
+  /* #EE0BF5 cctv*/
+  66% {
+    color: #b700ff;
+  }
+  /* #00CCFF marine */
+  100% {
+    color: #57068c;
+  }
+  /* #66F50B radio */
 }
