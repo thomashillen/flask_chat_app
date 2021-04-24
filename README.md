@@ -18,8 +18,7 @@ This is an online chat application made to support onine schooling which uses Py
         2.4 Private Messaging
         2.5 Sign-Up for Unregistered Users
     3.0 Future Improvements
-    4.0 Conclusion
-    5.0 References
+    4.0 References
 
 ## 1.0 Introduction
 
@@ -46,9 +45,9 @@ Execute the application by
 ### 1.4 List of Files
 1. msg_history: folder that contains txt message history files of public and private chats 
 2. static: css
-3. templates: html pages
+3. templates: html files
 4. main.py
-5. requirements.txt: download requirements
+5. requirements.txt: library requirements
 6. users.txt: list of user login profiles
 
 ## 2.0 Development
@@ -98,9 +97,7 @@ Class Announcements (read only) (professor write only)
 Class Questions (read and write)
 Pressing Enter sends message
 
-## 4.0 Conclusion
-
-## 5.0 References
+## 4.0 References
 
 - Socket Programming:
 
