@@ -10,11 +10,15 @@
 
 <body class="text-center">
   <div class="main">
+
+    
+    
     <form class="form-signin" action="{{url_for('home')}}" method="POST">
-      <div class="title-text">
-        <span class="letters">NYU </span>
+      <div class="title-text" ">
+        <img src="static/NYU.png" alt="NYU" width="75" style="padding-bottom: 35px; padding-right: 10px;">
+        <span class="letters"> NYU </span>
         <span class="letters">Chat</span>
-      </div>
+    </div>
       <br><br>
       <input type="text" id="username" name="username" class="form-control" placeholder="NetID" required autofocus><br>
       <input type="password" id="password" name="password" class="form-control" placeholder="Password" required><br>
@@ -24,6 +28,7 @@
       <br><br>
       <a href="{{url_for('SignUp')}}">Sign-Up</a>
     </form>
+
   </div>
   
 
