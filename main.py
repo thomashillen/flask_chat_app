@@ -11,7 +11,7 @@ Session(app)
 
 socketio = SocketIO(app, manage_session=False)
 
-# create user objects, read from csv
+# create user objects, read from user.txt
 login_list = {}
 
 
