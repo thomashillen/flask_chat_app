@@ -46,7 +46,7 @@
   </head>
 
   <body class="text-center">
-      
+
     <div class="sidenav">
         <img class="logo" src="../static/NYU.png" >
         <div name="enrolled classes" style="padding-bottom: 10px;">
@@ -68,14 +68,20 @@
         </div>
     </div>
     
-    <div class="main">
-        <h2 >NYU Chat</h2>
-        <h2>Room : {{session['room_display']}}</h2><br>
-        <textarea id="chat" cols="70" rows="10" placeholder="No messages yet. Start one..." style="margin-bottom:10px;"></textarea>
-        <div style="width:100%;">
-            <input type="text" id="text" placeholder="Enter your message here" style="margin-bottom: 10px; width: calc(100% - 80px); "/> 
-            <button type="button" id="send" class="btn btn-success" style="width:75px">SEND</button>
+    <div class="main" style="align-items:center;">
+        <div style="max-width:1000px ">
+            <div class="title-text">
+                <span class="letters">NYU </span>
+                <span class="letters">Chat</span>
+            </div>
+            <h2>Room : {{session['room_display']}}</h2><br>
+            <textarea id="chat" cols="70" rows="10" placeholder="No messages yet. Start one..." style="margin-bottom:10px;"></textarea>
+            <div style="width:100%;">
+                <input type="text" id="text" placeholder="Enter your message here" style="margin-bottom: 10px; width: calc(100% - 80px); "/> 
+                <button type="button" id="send" class="btn btn-success" style="width:75px">SEND</button>
+            </div>
         </div>
+        
 
         
         <center><button type="button" class="btn btn-danger" onclick=leave_room()>Leave this Chat</button></center>

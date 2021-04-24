@@ -11,7 +11,11 @@
 <body class="text-center">
   <div class="main">
     <form class="form-signin" action="{{url_for('home')}}" method="POST">
-      <h1 class="h2 mb-3 font-weight-normal">NYU Chat</h1><br><br>
+      <div class="title-text">
+        <span class="letters">NYU </span>
+        <span class="letters">Chat</span>
+      </div>
+      <br><br>
       <input type="text" id="username" name="username" class="form-control" placeholder="NetID" required autofocus><br>
       <input type="password" id="password" name="password" class="form-control" placeholder="Password" required><br>
       <!-- An element to toggle between password visibility -->
