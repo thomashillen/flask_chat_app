@@ -24,6 +24,7 @@ body {
   padding-top: 200px;
   min-width: 250px;
   float: left;
+  text-align: center;
 }
 /* The navigation menu links */
 .sidenav a {
@@ -41,7 +42,7 @@ body {
   padding: 20px;
   flex-basis: 0;
   flex-grow: 999;
-  min-width: 66%;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -133,6 +134,7 @@ body {
 
 .title-text {
   text-align: center;
+  width: 500px;
 }
 
 .title-text span.letters {
