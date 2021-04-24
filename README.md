@@ -8,13 +8,15 @@ This is an online chat application made to support onine schooling which uses Py
 
     1.0 Introduction
         1.1 Purpose
-        1.3 Installation
-        1.4 Run
+        1.2 Installation
+        1.3 Run
+        1.4 List of Files
     2.0 Developement
         2.1 Login
         2.2 Homepage
         2.3 Classroom Group Chat
         2.4 Private Messaging
+        2.5 Sign-Up for Unregistered Users
     3.0 Future Improvements
     4.0 Conclusion
     5.0 References
@@ -41,23 +43,46 @@ Execute the application by
 
     `python app.py`
 
+### 1.4 List of Files
+1. msg_history: folder that contains txt message history files of public and private chats 
+2. static: css
+3. templates: html pages
+4. main.py
+5. requirements.txt: download requirements
+6. users.txt: list of user login profiles
+
 ## 2.0 Development
 
 ### 2.1 Login
 
 Enter username and password
 Password hidden/show password
+Optional 'sign-up' for unregistered users
 
 ### 2.2 Homepage
 
 Side bar with classes
 A way to enter private messaging
-Filter search
 Logout (go back to login)
 
 ### 2.3 Classroom Group Chat
 
+Joining a chat emits status to everyone that user has entered
+History is emitted upon joining
+Ability to send/recieve messages from users
+Ability to exit the chat (remaining users notified)
+
 ### 2.4 Private Messaging
+
+Search bar functionality for finding users
+Joining a chat emits status to everyone that user has entered
+History is emitted upon joining
+Ability to send/recieve messages privately between two users
+Ability to exit the chat (remaining users notified)
+
+### 2.5 Sign-Up for Unregistered Users
+
+Enter netID, password, first name, last name, role
 
 ## 3.0 Future Improvements
 
