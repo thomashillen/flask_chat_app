@@ -45,13 +45,15 @@ def index():
         last = request.form['last']
         role = request.form['role']
         f = open('users.txt', "a")
-        f.write("\n"+netID + ', ' + password + ', ' + first + ', '+ last + ', ' + role + "\n")
+        f.write("\n"+netID + ', ' + password + ', ' +
+                first + ', ' + last + ', ' + role + "\n")
         f.close()
         obj = user(netID, password, first, last, role)
         login_list[obj.netID] = obj
         return render_template('index.html')
     elif(request.method == 'GET'):
         return render_template('index.html')
+
 
 @app.route('/SignUp', methods=['GET', 'POST'])
 def SignUp():
@@ -96,7 +98,8 @@ def chat():
             else:
                 translate = requested+user
             session['room'] = translate
-            session['room_display'] = login_list.get(user).first + " " + login_list.get(user).last + " and " + login_list.get(requested).first + " " + login_list.get(requested).last
+            session['room_display'] = login_list.get(user).first + " " + login_list.get(
+                user).last + " and " + login_list.get(requested).first + " " + login_list.get(requested).last
 
             return render_template('chat.html', session=session)
 
