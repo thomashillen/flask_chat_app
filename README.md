@@ -40,10 +40,11 @@ Today, the main means for communication between a student and a professors is em
 
 Execute the application by
 
-    `python app.py`
+`python app.py`
 
 ### 1.4 List of Files
-1. msg_history: folder that contains txt message history files of public and private chats 
+
+1. msg_history: folder that contains txt message history files of public and private chats
 2. static: css
 3. templates: html files
 4. main.py
@@ -85,17 +86,17 @@ Enter netID, password, first name, last name, role
 
 ## 3.0 Future Improvements
 
-Database
-Automatic history
-Encryption
-Quiz/Poll functionality
-Sending Files
-Mentioning
-Searching for keywords
-See which users are online
-Class Announcements (read only) (professor write only)
-Class Questions (read and write)
-Pressing Enter sends message
+- Database
+- Automatic history
+- Encryption
+- Quiz/Poll functionality
+- Sending Files
+- Mentioning
+- Searching for keywords
+- See which users are online
+- Class Announcements (read only) (professor write only)
+- Class Questions (read and write)
+- Pressing Enter sends message
 
 ## 4.0 References
 
