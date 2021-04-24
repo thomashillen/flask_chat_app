@@ -27,28 +27,27 @@
 
 
   <body>
+    
     <div class="sidenav">
       <img class="logo" src="../static/NYU.png" >
-      <a class="a" style= "color:white; font-size:26px; text-decoration:underline">Enrolled Classes:</a>
-      <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
-        <button class="form-control" type="submit" name="room" id = "room" value="Computer Networking">CSCI-308 Computer Networking</button>
-      </form>
-      <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
-        <button class="form-control" type="submit" name="room" id = "room" value="Shanghai Stories">HUMN-366 Shanghai Stories</button>
-      </form>
-      <br>
-      <br>
-    <button class="btn btn-primary" onclick=pvtmsg() >Private Messaging</button>
-
-    <br /><br />
-    
-    <center><button type="button" class="btn btn-danger" onclick=leave_room()>Homepage</button></center>
-    <br />
-
-    <center><button type="button" class="btn btn-danger" onclick=logout()>Logout</button></center>
-
-
-    </div>
+      <div name="enrolled classes" style="padding-bottom: 10px;">
+          <a class="a" style= "color:white; font-size:26px; text-decoration:underline; padding-bottom: 10px;">Enrolled Classes:</a>
+          <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
+              <button class="form-control" type="submit" name="room" id = "room" value="Computer Networking">CSCI-308 Computer Networking</button>
+          </form>
+          <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
+              <button class="form-control" type="submit" name="room" id = "room" value="Shanghai Stories">HUMN-366 Shanghai Stories</button>
+          </form>
+      </div>
+      
+      <div style="padding-bottom: 20px; padding-top: 30px">
+          <button class="btn btn-primary" onclick=pvtmsg() >Private Messaging</button>
+          <br><br>
+          <center><button type="button" class="btn btn-danger" onclick=leave_room()>Homepage</button></center>
+          <br>
+          <center><button type="button" class="btn btn-danger" onclick=logout()>Logout</button></center>
+      </div>
+  </div>
     
     <div class="main" style="overflow:hidden; align-items:center">
 

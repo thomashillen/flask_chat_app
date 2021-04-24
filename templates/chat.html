@@ -49,36 +49,39 @@
   </head>
 
   <body class="text-center">
+      
     <div class="sidenav">
         <img class="logo" src="../static/NYU.png" >
-        <a class="a" style= "color:white; font-size:26px; text-decoration:underline">Enrolled Classes:</a>
-        <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
-          <button class="form-control" type="submit" name="room" id = "room" value="Computer Networking">CSCI-308 Computer Networking</button>
-        </form>
-        <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
-          <button class="form-control" type="submit" name="room" id = "room" value="Shanghai Stories">HUMN-366 Shanghai Stories</button>
-        </form>
-        <br>
-        <br>
-      <button class="btn btn-primary" onclick=pvtmsg() >Private Messaging</button>
-  
-      <br /><br />
-      
-      <center><button type="button" class="btn btn-danger" onclick=leave_room()>Homepage</button></center>
-      <br />
-  
-      <center><button type="button" class="btn btn-danger" onclick=logout()>Logout</button></center>
-  
-  
-      </div>
+        <div name="enrolled classes" style="padding-bottom: 10px;">
+            <a class="a" style= "color:white; font-size:26px; text-decoration:underline; padding-bottom: 10px;">Enrolled Classes:</a>
+            <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
+                <button class="form-control" type="submit" name="room" id = "room" value="Computer Networking">CSCI-308 Computer Networking</button>
+            </form>
+            <form class="form-signin" action="{{url_for('chat')}}" method="POST" autocomplete="off">
+                <button class="form-control" type="submit" name="room" id = "room" value="Shanghai Stories">HUMN-366 Shanghai Stories</button>
+            </form>
+        </div>
+        
+        <div style="padding-bottom: 20px; padding-top: 30px">
+            <button class="btn btn-primary" onclick=pvtmsg() >Private Messaging</button>
+            <br><br>
+            <center><button type="button" class="btn btn-danger" onclick=leave_room()>Homepage</button></center>
+            <br>
+            <center><button type="button" class="btn btn-danger" onclick=logout()>Logout</button></center>
+        </div>
+    </div>
     
-        <div class="main">
+    <div class="main">
         <h2 >NYU Chat</h2>
         <h2>Room : {{session['room_display']}}</h2><br>
-        <textarea id="chat" cols="70" rows="10" placeholder="No messages yet. Start one..."></textarea><br /><br />
-        <input type="text" id="text" size="60" placeholder="Enter your message here" style="margin-bottom: 10px;"/> 
-        <button type="button" id="send" class="btn btn-success">SEND</button><br /><br />
-        <center><button type="button" class="btn btn-danger" onclick=leave_room()>Leave this Chat</button></center>
+        <textarea id="chat" cols="70" rows="10" placeholder="No messages yet. Start one..." style="margin-bottom:10px;"></textarea>
+        <div style="width:100%;">
+            <input type="text" id="text" placeholder="Enter your message here" style="margin-bottom: 10px; width: calc(100% - 80px); "/> 
+            <button type="button" id="send" class="btn btn-success" style="width:75px">SEND</button>
         </div>
+
+        
+        <center><button type="button" class="btn btn-danger" onclick=leave_room()>Leave this Chat</button></center>
+    </div>
   </body>
 </html>
