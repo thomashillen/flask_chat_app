@@ -40,7 +40,7 @@ Today, the main means for communication between a student and a professors is em
 
 Execute the application by
 
-    `python app.py`
+`python app.py`
 
 ### 1.4 List of Files
 
