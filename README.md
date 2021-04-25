@@ -121,12 +121,6 @@ Enter netID, password, first name, last name, role
   - https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
   - https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxi-user-notifications
 
-- Ajax:
-
-- HTML:
-
-- HTML and Python:
-
 - Diffie-Hellman encryption technique:
 
   - https://medium.com/@sadatnazrul/diffie-hellman-key-exchange-explained-python-8d67c378701c
