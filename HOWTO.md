@@ -16,4 +16,6 @@ This is an online chat application made to support onine schooling which uses Py
 
 Execute the application by
 
-    `python app.py`
+    `python main.py`
+
+ *Please make sure to run on different browsers or completely different instances of a browser (ex. Chrome & Chrome Incognito)*

@@ -40,7 +40,9 @@ Today, the main means for communication between a student and a professors is em
 
 Execute the application by
 
-`python app.py`
+`python main.py`
+
+ *Please make sure to run on different browsers or completely different instances of a browser (ex. Chrome & Chrome Incognito)*
 
 ### 1.4 List of Files
 
