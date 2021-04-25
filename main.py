@@ -113,16 +113,17 @@ def chat():
             return render_template('chat.html', session=session)
         else:
             return redirect(url_for('index'))
-
+clients = []
 
 @socketio.on('join', namespace='/chat')
 def join(message):
+    clients.append(request.sid)
     room = session.get('room')
     join_room(room)
     str_room = "msg_history/%s.txt" % str(room)
     t = open(str_room, "r")
     history = t.read()
-    emit('message', {'msg': history}, room=room)
+    emit('message', {'msg': history}, room=clients[-1])
     t.close()
     username = login_list.get(
         session.get('username')).first + " " + login_list.get(session.get('username')).last
